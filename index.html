@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: "Segoe UI", sans-serif;
-      background: url('https://example.com/graduation-background.jpg') no-repeat center center fixed;
+      background: url('https://cdn.pixabay.com/photo/2016/04/01/11/59/graduation-1300341_1280.png') no-repeat center center fixed;
       background-size: cover;
       color: #fff;
       scroll-behavior: smooth;
@@ -65,7 +65,7 @@
   <p>Құрметті туыстар мен достар!<br>
   Сіздерді отбасымыз үшін маңызды оқиға — <strong>екі ұлымыздың және қызымыздың түлектер кешіне</strong> шақырамыз:
   Мереке — <strong>Назарбаев Университетінің</strong> түлегі,
-  Мерей — <strong>НЗМ мектебінің</strong> түлегі,
+  Мерей — <strong>НИШ мектебінің</strong> түлегі,
   Жанерке — <strong>9-сыныпты</strong> аяқтады.</p>
   <p>Бізбен бірге осы қуанышты сәтті бөлісуге асығыңыз!</p>
   <p><strong>Күні:</strong> 4 шілде 2025 жыл<br>
@@ -95,8 +95,7 @@
 </section>
 
 <script>
-  const eventDate = new Date("2025-07-04T19:00:00").getTime();
-
+  const eventDate = new Date(2025, 6, 4, 19, 0, 0); // 6 = шілде
   function updateCountdown() {
     const now = new Date().getTime();
     const distance = eventDate - now;
