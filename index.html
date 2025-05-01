@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kk">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Выпускной 2025 — Семья Мырзабек</title>
+  <title>Ажибаевтер отбасының түлектер кеші</title>
   <style>
     body {
       margin: 0;
       font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      background: url('https://example.com/graduation-background.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: #fff;
       scroll-behavior: smooth;
     }
@@ -16,6 +17,8 @@
       padding: 60px 20px;
       max-width: 800px;
       margin: auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
     }
     nav {
       position: fixed;
@@ -51,42 +54,44 @@
 <body>
 
 <nav>
-  <a href="#about">О событии</a>
-  <a href="#place">Место</a>
-  <a href="#schedule">Программа</a>
-  <a href="#countdown">Отсчёт</a>
+  <a href="#about">Шақыру</a>
+  <a href="#place">Өтетін орны</a>
+  <a href="#schedule">Бағдарлама</a>
+  <a href="#countdown">Кері санау</a>
 </nav>
 
 <section id="about">
-  <h1>Двойной праздник выпускников!</h1>
-  <p>Дорогие друзья и родные!<br>
-  Приглашаем вас отпраздновать важное событие для нашей семьи — <strong>выпускной двух сыновей</strong>:
-  один завершает обучение в <strong>Назарбаев Университете</strong>, другой — в <strong>НИШ</strong>.</p>
-  <p>Будем рады видеть вас на вечере, полном гордости, благодарности и радости!</p>
-  <p><strong>Дата:</strong> 4 июля 2025 года<br>
-     <strong>Время:</strong> начало в 19:00</p>
+  <h1>Ажибаевтер отбасының түлектер кешіне шақыру</h1>
+  <p>Құрметті туыстар мен достар!<br>
+  Сіздерді отбасымыз үшін маңызды оқиға — <strong>екі ұлымыздың және қызымыздың түлектер кешіне</strong> шақырамыз:
+  Мереке — <strong>Назарбаев Университетінің</strong> түлегі,
+  Мерей — <strong>НЗМ мектебінің</strong> түлегі,
+  Жанерке — <strong>9-сыныпты</strong> аяқтады.</p>
+  <p>Бізбен бірге осы қуанышты сәтті бөлісуге асығыңыз!</p>
+  <p><strong>Күні:</strong> 4 шілде 2025 жыл<br>
+     <strong>Уақыты:</strong> 19:00</p>
 </section>
 
 <section id="place">
-  <h2>Место проведения</h2>
-  <p>Астана Молл, Event Hall, г. Астана</p>
-  <p><a class="map-link" href="https://2gis.kz/astana/geo/70000001076826568" target="_blank">Посмотреть в 2ГИС</a></p>
+  <h2>Өтетін орны</h2>
+  <p>Астана Молл, Event Hall, Астана қаласы</p>
+  <p><a class="map-link" href="https://2gis.kz/astana/firm/70000001018123364" target="_blank">2ГИС картасында көру</a></p>
 </section>
 
 <section id="schedule">
-  <h2>Программа</h2>
+  <h2>Бағдарлама</h2>
   <ul>
-    <li>19:00 — Сбор гостей и фотосессия</li>
-    <li>19:30 — Торжественная часть</li>
-    <li>20:00 — Выступления родителей и учителей</li>
-    <li>20:30 — Ужин и праздничная программа</li>
-    <li>22:00 — Музыка, танцы и веселье!</li>
+    <li>19:00 — Қонақтарды қарсы алу және фотосессия</li>
+    <li>19:30 — Салтанатты бөлім</li>
+    <li>20:00 — Ата-аналар мен мұғалімдердің құттықтаулары</li>
+    <li>20:30 — Кешкі ас және мерекелік бағдарлама</li>
+    <li>22:00 — Музыка, би және көңілді кеш!</li>
   </ul>
 </section>
 
 <section id="countdown">
-  <h2>Обратный отсчёт</h2>
-  <div class="countdown" id="timer">Загрузка таймера...</div>
+  <h2>Кері санау</h2>
+  <div class="countdown" id="timer">Таймер жүктелуде...</div>
 </section>
 
 <script>
@@ -97,7 +102,7 @@
     const distance = eventDate - now;
 
     if (distance < 0) {
-      document.getElementById("timer").innerHTML = "Мероприятие уже началось!";
+      document.getElementById("timer").innerHTML = "Іс-шара басталды!";
       return;
     }
 
@@ -107,7 +112,7 @@
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     document.getElementById("timer").innerHTML =
-      ${days} д. ${hours} ч. ${minutes} мин. ${seconds} сек.;
+      ${days} күн ${hours} сағат ${minutes} минут ${seconds} секунд;
   }
 
   setInterval(updateCountdown, 1000);
